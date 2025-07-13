@@ -22,6 +22,7 @@ for (let x = 0; x < operation.length; x++) {
 
 equal.addEventListener("click", () => {
   result.value = eval(result.value);
+  result.focus();
   return result.value;
 });
 
@@ -31,12 +32,15 @@ clear.addEventListener("click", () => {
   }
 });
 
-
 result.addEventListener("input", () => {
-  result.value=result.value.replace(/[a-z]/i, "");
-  
+  result.value = result.value.replace(/[a-z]/i, "");
 });
 
+result.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    result.value = eval(result.value);
+  }
+});
 
 window.addEventListener("load", () => {
   result.focus();

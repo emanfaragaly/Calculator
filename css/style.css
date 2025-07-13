@@ -30,6 +30,8 @@ body {
   font-size: 75px;
   font-weight: 300;
   padding: 10px;
+  outline: none;
+  appearance: none;
 }
 
 .theme,

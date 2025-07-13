@@ -31,6 +31,19 @@ clear.addEventListener("click", () => {
   }
 });
 
+
+result.addEventListener("input", () => {
+  result.value=result.value.replace(/[a-z]/i, "");
+  
+});
+
+
+window.addEventListener("load", () => {
+  result.focus();
+});
+
+// theme calculator
+
 ligth.addEventListener("click", () => {
   result.style.cssText = "color: black;";
   number.forEach((number) => {
